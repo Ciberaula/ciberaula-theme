@@ -1,0 +1,123 @@
+// =====================================================================
+// Ciberaula Theme — Sidebar & navegación
+// Sobrescribe el sidebar de just-the-docs con paleta e interacciones propias
+// =====================================================================
+
+@import "../base/variables";
+
+// ── Sidebar ────────────────────────────────────────────────────────────
+.side-bar {
+  background: $warm-white;
+  border-right: 1px solid $border;
+  font-family: $font-family-body;
+}
+
+.site-header {
+  border-bottom: 1px solid $border;
+  padding: 1.25rem 1.5rem;
+}
+
+.site-title {
+  font-family: $font-family-display !important;
+  font-weight: 700;
+  color: $navy !important;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.site-title:hover {
+  color: $coral !important;
+  background: transparent !important;
+}
+
+// ── Nav list ───────────────────────────────────────────────────────────
+.site-nav {
+  padding: 0.75rem 0;
+}
+
+.nav-list .nav-list-item .nav-list-link {
+  color: $text-light;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.5rem;
+  border: none !important;
+  background: none !important;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover {
+  color: $navy;
+  background: rgba($coral, 0.06) !important;
+}
+
+.nav-list .nav-list-item .nav-list-link.active {
+  color: $navy !important;
+  font-weight: 700;
+  background: rgba($coral, 0.1) !important;
+  border-left: 3px solid $coral !important;
+  padding-left: calc(1.5rem - 3px);
+}
+
+// ── Site footer (sidebar bottom) ──────────────────────────────────────
+.site-footer {
+  border-top: 1px solid $border;
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  color: $text-muted;
+  font-style: italic;
+
+  a {
+    color: $navy;
+    border: none !important;
+  }
+  a:hover { color: $coral; }
+}
+
+// ── Top search bar ─────────────────────────────────────────────────────
+.main-header {
+  background: $cream;
+  border-bottom: 1px solid $border;
+}
+
+.search-input {
+  background: $cream;
+  color: $text;
+  font-family: $font-family-body;
+  font-size: 0.95rem;
+
+  &::placeholder { color: $text-muted; }
+}
+
+// ── Aux nav (enlaces cabecera derecha) ────────────────────────────────
+.aux-nav {
+  .site-button {
+    color: $navy !important;
+    border: 1px solid $border !important;
+    background: $cream !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: $radius-sm;
+    transition: all 0.15s;
+
+    &:hover {
+      color: $coral !important;
+      border-color: $coral !important;
+      background: rgba($coral, 0.05) !important;
+    }
+  }
+}
+
+// ── Skip-to-main link (accesibilidad) ─────────────────────────────────
+.skip-to-main {
+  background: $navy;
+  color: $cream;
+
+  &:focus {
+    background: $coral;
+    color: $cream;
+  }
+}
