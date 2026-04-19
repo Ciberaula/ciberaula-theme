@@ -1,0 +1,81 @@
+// =====================================================================
+// Ciberaula Theme — Custom stylesheet
+// Importado por just-the-docs al final, sobrescribe todo lo necesario
+// =====================================================================
+
+@import "./base/variables";
+@import "./base/typography";
+
+@import "./components/sidebar";
+@import "./components/editorial";
+@import "./components/hero";
+@import "./components/footer";
+
+// ── Ajustes globales finales que vencen al CSS de just-the-docs ────────
+
+.main-content-wrap {
+  background: $cream;
+}
+
+.main-content {
+  max-width: calc(#{$max-width-prose} + 8rem);
+  padding: 2rem $content-padding 3rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .main-content { padding: 1.5rem 2rem 2.5rem; }
+}
+
+@media (max-width: 640px) {
+  .main-content { padding: 1rem 1.25rem 2rem; }
+
+  .ciberaula-hero {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+
+  .ciberaula-hero__title,
+  .ciberaula-hero__category,
+  .ciberaula-hero__subtitle,
+  .ciberaula-hero__meta {
+    padding-left: 1rem;
+  }
+
+  .ciberaula-hero::before {
+    left: 1.25rem;
+    top: 1.75rem;
+  }
+}
+
+.main-content h2 .anchor-heading svg,
+.main-content h3 .anchor-heading svg,
+.main-content h4 .anchor-heading svg {
+  stroke: $coral !important;
+}
+
+.search-result {
+  color: $text;
+  border-bottom: 1px solid $border !important;
+}
+
+.search-result-title { color: $navy !important; font-weight: 600; }
+
+.copy-code-button {
+  color: $cream !important;
+  background: rgba($cream, 0.1) !important;
+  border: 1px solid rgba($cream, 0.2) !important;
+}
+
+.copy-code-button:hover {
+  background: $coral !important;
+  border-color: $coral !important;
+}
+
+.text-delta {
+  color: $coral;
+  font-family: $font-family-body;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
