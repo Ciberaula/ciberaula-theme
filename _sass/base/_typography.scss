@@ -1,0 +1,154 @@
+// =====================================================================
+// Ciberaula Theme — Tipografía editorial
+// =====================================================================
+
+@import "../base/variables";
+
+// ── Import fuentes Google ──────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+// ── Base de cuerpo ─────────────────────────────────────────────────────
+html { font-size: 17px; }
+
+body {
+  font-family: $font-family-body;
+  font-size: $fs-body;
+  line-height: 1.75;
+  color: $text;
+  background: $cream;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// ── Jerarquía de headings ──────────────────────────────────────────────
+h1, .site-title a, .main-content h1 {
+  font-family: $font-family-display;
+  font-weight: 700;
+  color: $navy;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+.main-content h1:first-of-type {
+  font-size: $fs-hero;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.main-content h1:first-of-type::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: $coral;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.main-content h2 {
+  font-family: $font-family-display;
+  font-weight: 700;
+  font-size: $fs-h2;
+  color: $navy;
+  line-height: 1.25;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $border;
+}
+
+.main-content h3 {
+  font-family: $font-family-body;
+  font-weight: 600;
+  font-size: $fs-h3;
+  color: $navy;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.main-content h4, .main-content h5, .main-content h6 {
+  font-family: $font-family-body;
+  font-weight: 600;
+  color: $navy-deep;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+// ── Párrafos con max-width de lectura ──────────────────────────────────
+.main-content p,
+.main-content ul,
+.main-content ol,
+.main-content blockquote:not(.pull-quote) {
+  max-width: $max-width-prose;
+  margin-bottom: 1.25rem;
+}
+
+.main-content p {
+  font-size: $fs-body;
+  line-height: 1.75;
+}
+
+// ── Enlaces ────────────────────────────────────────────────────────────
+.main-content a {
+  color: $navy;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba($coral, 0.5);
+  transition: border-color 0.15s, background 0.15s;
+}
+.main-content a:hover {
+  border-bottom-color: $coral;
+  background: rgba($coral, 0.08);
+}
+
+// ── Énfasis ────────────────────────────────────────────────────────────
+.main-content strong, .main-content b {
+  color: $navy-deep;
+  font-weight: 700;
+}
+
+.main-content em, .main-content i {
+  font-style: italic;
+  color: $text;
+}
+
+// ── Listas ─────────────────────────────────────────────────────────────
+.main-content ul, .main-content ol {
+  padding-left: 1.5rem;
+}
+
+.main-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.main-content ul > li::marker {
+  color: $coral;
+}
+
+.main-content ol > li::marker {
+  color: $navy;
+  font-weight: 700;
+}
+
+// ── Código inline ──────────────────────────────────────────────────────
+.main-content code {
+  background: $warm-white;
+  color: $navy-deep;
+  padding: 2px 6px;
+  border-radius: $radius-sm;
+  font-size: 0.92em;
+  font-family: $font-family-mono;
+  border: 1px solid $border;
+}
+
+// ── Separadores ────────────────────────────────────────────────────────
+.main-content hr {
+  border: 0;
+  height: 1px;
+  background: $border;
+  margin: 3rem 0;
+  max-width: $max-width-prose;
+}
