@@ -1,0 +1,81 @@
+@import "../base/variables";
+
+// =====================================================================
+// Hero de portada — para index.md de cada repo
+// =====================================================================
+
+.ciberaula-hero {
+  background: linear-gradient(135deg, $navy 0%, $navy-deep 100%);
+  color: $cream;
+  padding: 3.5rem 2rem 3rem;
+  margin: -2rem -#{$content-padding} 2.5rem;
+  border-radius: 0 0 $radius-lg $radius-lg;
+  position: relative;
+  overflow: hidden;
+}
+
+.ciberaula-hero::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 2.5rem;
+  width: 6px;
+  height: 100px;
+  background: $coral;
+  border-radius: 3px;
+}
+
+.ciberaula-hero__category {
+  display: inline-block;
+  font-family: $font-family-body;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: $coral;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.ciberaula-hero__title {
+  font-family: $font-family-display;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw, 3.4rem);
+  line-height: 1.1;
+  color: $cream !important;
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  letter-spacing: -0.02em;
+  border-bottom: none !important;
+}
+
+.ciberaula-hero__title::after {
+  display: none !important;
+}
+
+.ciberaula-hero__subtitle {
+  font-family: $font-family-body;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: $coral-light;
+  max-width: 720px;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-weight: 400;
+}
+
+.ciberaula-hero__meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  padding-left: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba($cream, 0.7);
+  flex-wrap: wrap;
+}
+
+.ciberaula-hero__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
