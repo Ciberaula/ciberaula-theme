@@ -1,0 +1,37 @@
+// =====================================================================
+// Ciberaula Theme — Color scheme "ciberaula"
+// Se activa via `color_scheme: ciberaula` en _config.yml del sitio
+// Sobrescribe las variables de color de just-the-docs con la paleta oficial
+// =====================================================================
+
+@import "./base/variables";
+
+// ── Colores base de just-the-docs sobrescritos ─────────────────────────
+$body-background-color:   $cream;
+$sidebar-color:           $warm-white;
+$search-background-color: $cream;
+$table-background-color:  $cream;
+$code-background-color:   $warm-white;
+$feedback-color:          darken($cream, 3%);
+
+$body-text-color:         $text;
+$body-heading-color:      $navy;
+$link-color:              $navy;
+$nav-child-link-color:    $text-light;
+$search-result-preview-color: $text-light;
+$btn-primary-color:       $coral;
+
+$base-button-color:       $cream;
+$base-button-background:  $coral;
+
+// Borders & líneas
+$border-color:            $border;
+$table-border-color:      $border;
+
+// ── Tipografía ─────────────────────────────────────────────────────────
+$body-font-family:        $font-family-body;
+$mono-font-family:        $font-family-mono;
+$root-font-size:          17px;
+$body-line-height:        1.75;
+$content-line-height:     1.75;
+$body-heading-line-height: 1.3;
