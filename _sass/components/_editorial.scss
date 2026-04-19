@@ -1,0 +1,304 @@
+// =====================================================================
+// Ciberaula Theme — Componentes editoriales
+// Clases aplicables desde Markdown con {: .nombre-clase}
+// =====================================================================
+
+@import "../base/variables";
+
+// ── 1. LEAD (entradilla) ───────────────────────────────────────────────
+// Uso: párrafo inicial de un artículo
+// Markdown: "Primer párrafo del artículo..." {: .lead}
+.main-content p.lead {
+  font-size: $fs-lead;
+  line-height: 1.65;
+  color: $text;
+  font-weight: 400;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  border-left: 4px solid $coral;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  max-width: $max-width-prose;
+}
+
+// ── 2. PULL-QUOTE (cita destacada) ────────────────────────────────────
+// Uso: frase impactante de 1-2 líneas que rompe el flujo de lectura
+// Markdown:
+//   > Frase destacada del artículo
+//   {: .pull-quote}
+.main-content blockquote.pull-quote {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: $cream;
+  background: $navy;
+  padding: 2.5rem 2.5rem 2rem 3rem;
+  margin: 2.5rem auto;
+  max-width: $max-width-prose;
+  border-radius: $radius-lg;
+  position: relative;
+  text-align: left;
+  border-left: none;
+}
+
+.main-content blockquote.pull-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: 0.3rem;
+  left: 1.2rem;
+  font-size: 5rem;
+  line-height: 1;
+  color: $coral;
+  font-family: $font-family-serif;
+  opacity: 0.9;
+}
+
+.main-content blockquote.pull-quote p {
+  margin: 0;
+  color: $cream;
+  max-width: none;
+}
+
+// ── 3. CALLOUTS (cajas de aviso) ──────────────────────────────────────
+// Uso: bloques de información importante
+// Markdown:
+//   > Contenido del callout
+//   {: .callout-info }
+//   {: .callout-warning }
+//   {: .callout-danger }
+
+.main-content blockquote[class*="callout-"] {
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  max-width: $max-width-prose;
+  border-radius: 0 $radius-md $radius-md 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-left: 5px solid;
+
+  p { margin: 0; max-width: none; }
+  p + p { margin-top: 0.5rem; }
+  strong { color: inherit; }
+}
+
+// Variante INFO (sage/verde — información neutra útil)
+.main-content blockquote.callout-info {
+  background: $sage-light;
+  border-left-color: $sage;
+  color: darken($sage-dark, 10%);
+
+  &::before {
+    content: 'ℹ';
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: $sage-dark;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+}
+
+// Variante WARNING (ámbar — precaución, plazo, requisito)
+.main-content blockquote.callout-warning {
+  background: $warning-bg;
+  border-left-color: $warning;
+  color: darken($warning, 20%);
+
+  &::before {
+    content: '⚠';
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+// Variante DANGER (coral — sanción, prohibición, error común)
+.main-content blockquote.callout-danger {
+  background: $danger-bg;
+  border-left-color: $coral;
+  color: $coral-dark;
+
+  &::before {
+    content: '✕';
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+}
+
+// ── 4. KEY-POINT (párrafo clave) ──────────────────────────────────────
+// Uso: idea importante que merece destacarse sin ser cita
+// Markdown: "Esta idea es clave..." {: .key-point}
+.main-content p.key-point,
+.main-content div.key-point {
+  background: $sage-light;
+  border-left: 4px solid $sage;
+  padding: 1rem 1.5rem;
+  margin: 1.75rem 0;
+  max-width: $max-width-prose;
+  font-weight: 500;
+  color: darken($sage-dark, 5%);
+  border-radius: 0 $radius-md $radius-md 0;
+}
+
+// ── 5. STAT CARD (cifra destacada) ────────────────────────────────────
+// Uso: dato numérico que merece impacto visual
+// Markdown:
+//   <div class="stat">
+//     <span class="stat-number">85%</span>
+//     <span class="stat-label">de empresas españolas invierten en IA</span>
+//     <span class="stat-source">Fuente: KPMG 2025</span>
+//   </div>
+.main-content .stat {
+  display: flex;
+  flex-direction: column;
+  background: $cream;
+  border: 1px solid $border;
+  border-top: 4px solid $coral;
+  border-radius: $radius-md;
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+  max-width: 440px;
+  box-shadow: $shadow-sm;
+
+  .stat-number {
+    font-family: $font-family-display;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: $coral;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-family: $font-family-body;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: $navy;
+    line-height: 1.4;
+  }
+
+  .stat-source {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: $text-muted;
+    margin-top: 0.75rem;
+  }
+}
+
+// Stats en grid cuando hay varios seguidos
+.main-content .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: $max-width-prose;
+  margin: 2rem 0;
+
+  .stat { margin: 0; max-width: none; }
+}
+
+// ── 6. TABLAS EDITORIALES ─────────────────────────────────────────────
+.main-content table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: $max-width-prose;
+  background: $cream;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+}
+
+.main-content thead {
+  background: $navy;
+}
+
+.main-content thead th {
+  color: $cream;
+  font-family: $font-family-body;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: none;
+}
+
+.main-content tbody tr {
+  border-bottom: 1px solid $border;
+}
+
+.main-content tbody tr:nth-child(even) {
+  background: $warm-white;
+}
+
+.main-content tbody tr:last-child {
+  border-bottom: none;
+}
+
+.main-content tbody td {
+  padding: 0.85rem 1rem;
+  color: $text;
+  vertical-align: top;
+  border: none;
+}
+
+.main-content tbody strong {
+  color: $navy-deep;
+}
+
+// ── 7. BLOCKQUOTE simple (sin clase) ──────────────────────────────────
+// Para citas normales en el texto — estilo discreto
+.main-content blockquote:not([class*="callout-"]):not(.pull-quote) {
+  border-left: 3px solid $border;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  max-width: $max-width-prose;
+  color: $text-light;
+  font-style: italic;
+}
+
+// ── 8. CÓDIGO EN BLOQUE ───────────────────────────────────────────────
+.main-content pre {
+  background: $navy-deep;
+  color: $cream;
+  padding: 1.25rem 1.5rem;
+  border-radius: $radius-md;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  max-width: $max-width-prose;
+
+  code {
+    background: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+}
+
+// ── 9. IMÁGENES E INFOGRAFÍAS ─────────────────────────────────────────
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius-md;
+  margin: 1.75rem 0;
+  box-shadow: $shadow-md;
+}
+
+.main-content figure {
+  margin: 2rem 0;
+  max-width: $max-width-prose;
+}
+
+.main-content figcaption {
+  font-size: 0.88rem;
+  color: $text-muted;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}
