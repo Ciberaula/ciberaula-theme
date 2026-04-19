@@ -1,0 +1,37 @@
+# Ciberaula Theme — configuración base heredable
+# Los sitios que usan este tema heredan estos defaults automáticamente
+
+# Este archivo es importado por los sitios como referencia si usan `remote_theme: Ciberaula/ciberaula-theme`
+# Los valores definidos aquí son sensatos por defecto y pueden sobrescribirse en el _config.yml del sitio.
+
+# Jekyll core
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Permalinks amigables
+permalink: pretty
+
+# Plugins requeridos
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults de just-the-docs que heredamos y adaptamos
+color_scheme: ciberaula
+
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s\-/]+/
+  rel_url: true
+  button: false
+
+enable_copy_code_button: true
+nav_sort: case_insensitive
+heading_anchors: true
