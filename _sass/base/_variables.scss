@@ -1,0 +1,70 @@
+// =====================================================================
+// Ciberaula Theme — Variables base
+// Paleta oficial del manual de identidad corporativa (marzo 2026)
+// =====================================================================
+
+// ── Colores de marca ───────────────────────────────────────────────────
+$navy:         #1B2A4A;
+$navy-deep:    #0F1A30;
+$navy-light:   #2C3E68;
+
+$coral:        #E07A5F;
+$coral-dark:   #C96348;
+$coral-light:  #F0A48E;
+
+$sage:         #6B8F71;
+$sage-light:   #E8F0E9;
+$sage-dark:    #4D6D54;
+
+// ── Neutros ────────────────────────────────────────────────────────────
+$cream:        #FAFAF7;   // fondo base — nunca blanco puro
+$warm-white:   #F5F3EF;   // alternancia
+$border:       #E4E0DA;
+
+$text:         #2C2C2C;   // texto principal
+$text-light:   #5A5A5A;   // texto secundario
+$text-muted:   #8A8A8A;   // meta, auxiliar
+
+// ── Estados ────────────────────────────────────────────────────────────
+$info:         $navy;
+$warning:      #f59e0b;
+$warning-bg:   #fef3c7;
+$danger:       $coral;
+$danger-bg:    #fbe5dc;
+$success:      $sage;
+$success-bg:   $sage-light;
+
+// ── Tipografía ─────────────────────────────────────────────────────────
+// Plus Jakarta Sans — hero H1, títulos de impacto editorial
+// Outfit — cuerpo, navegación, interfaz general
+// Georgia italic — pull-quotes y elementos editoriales clásicos
+
+$font-family-display: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-body:    'Outfit', 'Helvetica Neue', Arial, sans-serif;
+$font-family-serif:   Georgia, 'Times New Roman', serif;
+$font-family-mono:    'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+// ── Escala tipográfica ─────────────────────────────────────────────────
+$fs-hero:       clamp(2.4rem, 5vw, 3.2rem);    // ≈ 38-51px
+$fs-h1:         clamp(1.85rem, 3.5vw, 2.4rem); // H1 de artículo
+$fs-h2:         1.85rem;                        // ≈ 30px
+$fs-h3:         1.15rem;                        // ≈ 18px
+$fs-body:       17px;
+$fs-lead:       1.2rem;                         // entradilla
+$fs-small:      0.85rem;
+$fs-caption:    0.78rem;
+
+// ── Medidas ────────────────────────────────────────────────────────────
+$max-width-prose:  820px;     // columna de lectura (manual dice 820)
+$sidebar-width:    264px;
+$content-padding:  clamp(1.5rem, 3vw, 3rem);
+
+// ── Sombras ────────────────────────────────────────────────────────────
+$shadow-sm:  0 1px 3px rgba($navy, 0.06);
+$shadow-md:  0 4px 16px rgba($navy, 0.08);
+$shadow-lg:  0 8px 32px rgba($navy, 0.12);
+
+// ── Radios ─────────────────────────────────────────────────────────────
+$radius-sm:  4px;
+$radius-md:  8px;
+$radius-lg:  12px;
