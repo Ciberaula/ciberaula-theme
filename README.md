@@ -44,4 +44,4 @@ MIT License. Contenido de sitios construidos con este tema: cada sitio puede apl
 
 ---
 
-Mantenido por **Ana María González** · Directora de Ciberaula · © 2026
+Mantenido por **María González** · Directora de Ciberaula · © 2026
